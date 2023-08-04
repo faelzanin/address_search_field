@@ -104,6 +104,7 @@ class GeoMethods {
       );
       try {
         final response = await _httpClient(uri);
+        print(response);
         response['predictions']
             .forEach((element) => list.add(Address.fromReference(
                   reference: element['description'],
